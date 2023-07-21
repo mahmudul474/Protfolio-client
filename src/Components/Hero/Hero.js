@@ -23,7 +23,7 @@ export default function Hero() {
       }}
       className="bg-cover bg-no-repeat bg-center  overflow-hidden"
     >
-      <section className="dark:bg-gray-800 h-[800px] dark:text-gray-100">
+      <section className="  h-[800px] d ">
         <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
           <div className="     flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
             <h1 className=" text-lg font-bold    lg:text-6xl">
@@ -50,8 +50,8 @@ export default function Hero() {
               </span>
             </div>
 
-            <div className="flex justify-start mt-8  items-center">
-              <h2 className="text-2xl font-semibold">Tech Stack</h2>
+            <div className="flex justify-start mt-8   items-center">
+              <p className="text-xl font-semibold flex ">Tech Stack</p>
               <div className="flex justify-start   items-center">
                 <img
                   className="w-16  h-16 object-cover mr-2"
