@@ -25,7 +25,7 @@ const Contact = () => {
 
               <div className="flex-col3">
                 <h1 className="text-4xl mb-8 text-gray-200">
-                  Narayongonj, Dhaka, <br />{" "}
+                  Rampura, Dhaka, <br />{" "}
                   <span className="text-green-500"> Bangladesh</span>
                 </h1>
                 <h1 className="text-4xl text-gray-200 mb-8">

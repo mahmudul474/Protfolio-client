@@ -1,0 +1,52 @@
+[
+  {
+    "title": "Remote-Talks",
+    "mainImg": "https://i.ibb.co/ypDWLyK/screencapture-remote-talk-netlify-app-2023-07-22-00-20-48.png",
+    "smartImg": "https://i.ibb.co/VW191vw/Screenshot-15.png",
+    "short-desc": "RemoteTalks is a web-based communication platform inspired by Zoom, developed using the MERN stack (MongoDB, Express.js, React, Node.js). The platform aims to provide a comprehensive remote communication experience, allowing users to create and join meetings, share their screens, send chat messages, manage friend requests, and edit their profiles.",
+    "features": [
+      "Meeting Features: Remote Talk Allows Users To Create Meetings With Features Such As Virtual Hand-Raising, Screen Sharing, And Live Streaming ",
+      " Chat System: Remote Talk Has A Built-In Messenger System For Communication Outside Of Meetings",
+      "Profile Editing: Remote Talk Users Can Edit Their Profiles And Send Friend Requests",
+      " Feedback System: Remote Talk Has An Option For Users To Provide Feedback On The Application",
+
+      "Authentication And Authorization: Remote Talk Has A Secure User Authentication System With JWT Tokens.",
+
+      "Responsive Design: Remote Talk Is Designed With A Responsive Interface For Optimal User Experience On Different Devices."
+    ],
+    "subimg": [
+      "https://i.ibb.co/DYcsJdT/Screenshot-3.png",
+      "https://i.ibb.co/QCs3Mh4/Screenshot-4.png",
+      "https://i.ibb.co/4JBQt8N/Screenshot-5.png",
+      "https://i.ibb.co/5Y8HqXN/Screenshot-6.png",
+      "https://i.ibb.co/VW191vw/Screenshot-15.png"
+    ],
+    "technology": [
+      "frontend: Html, Css, Tailwind,JavaScript, React",
+      "Backend:  Node, Express,   VideoSDK, webRTC, webSocket",
+      "Authentication: JWT,Firebase",
+      "Database:  MongoDB, Vercel, ",
+      "Other tools and libraries: Netlify, ReactHookFrom, TanStack-React-Query"
+    ],
+    "link": [
+      { "live": "https://remote-talks.web.app" },
+      {
+        "client": "https://github.com/mahmudul474/Remot-talk-client-team-project-.git"
+      },
+      {
+        "server": "https://github.com/mahmudul474/Remote-talk-backend-team-project-.git"
+      }
+    ]
+  }
+]
+
+//  {
+//     "title": "",
+//     "mainImg": "",
+//     "smartImg": "",
+//     "short-desc": "",
+//     "features": ["", "", "", "", "", "", ""],
+//     "subimg": ["", "", "", "", "", ""],
+//     "technology": ["", "", "", "", ""],
+//     "link": [{ "live": "" }, { "client": "" }, { "server": "" }]
+//   }

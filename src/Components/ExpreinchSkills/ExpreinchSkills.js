@@ -11,9 +11,9 @@ export default function ExpreinchSkills() {
         >
           <div className="flex flex-col justify-between items-center lg:flex-row">
             <div className="px-5 pt-6 pb-5 text-left lg:w-1/2">
-              <h1 className=" text-5xl leading-[60px]   font-mediums font-semibold text-black    	">
-                My mission is to <br /> create an impact <br />{" "}
-                <span className="text-green-500"> globally</span>
+              <h1 className=" text-5xl   font-bold text-black    	">
+                I Develop Skills Regularly to <br /> Keep Me Update
+                <br />
               </h1>
 
               <div className="list-none ">
