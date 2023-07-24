@@ -1,5 +1,5 @@
-import React from 'react';
- 
+import React, { useState } from "react";
+
 import Releted from "./Releted-Projects/Releted";
 import { AiFillGithub } from "react-icons/ai";
 import { BsCreditCard2FrontFill } from "react-icons/bs";
@@ -7,7 +7,17 @@ import { useLoaderData } from "react-router-dom";
 
 const Dettails = () => {
   const data = useLoaderData();
-  console.log(data, "data");
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState("");
+
+  const handleImageClick = imageSrc => {
+    setSelectedImage(imageSrc);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
   return (
     <>
       <section className="text-gray-600 body-font overflow-hidden">
@@ -84,14 +94,15 @@ const Dettails = () => {
                   ))}
                 </ul>
               </div>
+              <hr />
 
               <div className="mt-5 ">
-                <h1 className="capitalize text-2xl font-semibold ">
+                <h1 className="capitalize text-2xl  text-black  font-semibold ">
                   Technology
                 </h1>
                 <ul>
-                  {data?.Technology?.map(tec => (
-                    <li className="my-2 capitalize font-semibold">{tec}</li>
+                  {data?.technology?.map(teck => (
+                    <li className="my-2 capitalize font-semibold">{teck}</li>
                   ))}
                 </ul>
               </div>
@@ -100,23 +111,46 @@ const Dettails = () => {
         </div>
       </section>
 
-      <div className="divider ">
-        <span className="text-xl capitalize semibold text-green-500">
+      <div className="divider  container mx-auto px-5 py-2 lg:px-32 lg:pt-12">
+        <span className="text-2xl capitalize semibold text-green-500">
           see-more
         </span>
       </div>
 
-      <div className="my-6 px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-10 ">
-          {data?.image?.map(img => (
-            <img
-              className=" border-green-500  border h-44  object-cover"
-              src={img}
-              alt="image description"
-            />
+      <div class="container mx-auto px-5 py-2 lg:px-32 lg:pt-12">
+        <div className="flex flex-wrap">
+          {data?.subimg?.map((img, index) => (
+            <div
+              key={index}
+              className="w-1/3 p-1 md:p-2"
+              onClick={() => handleImageClick(img)}
+            >
+              <img
+                alt="gallery"
+                className="block h-full w-full rounded-lg object-cover object-center cursor-pointer"
+                src={img}
+              />
+            </div>
           ))}
         </div>
       </div>
+      {modalOpen && (
+        <div className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-gray-900 bg-opacity-75">
+          <div className="max-w-screen-md mx-auto bg-white p-4 rounded-lg w-full">
+            <img
+              alt="selected image"
+              className="w-full rounded-lg object-cover object-center"
+              src={selectedImage}
+            />
+            <button
+              className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-lg"
+              onClick={closeModal}
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </>
   );
 };

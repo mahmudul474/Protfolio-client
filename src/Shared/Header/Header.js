@@ -1,7 +1,25 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-scroll";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <div class="px-4 py-5 mx-auto  md:px-24 container lg:px-8">
       <div class="relative flex items-center justify-between">
@@ -11,23 +29,9 @@ export default function Header() {
           title="Company"
           class="inline-flex items-center"
         >
-          <svg
-            class="w-8 text-deep-purple-accent-400"
-            viewBox="0 0 24 24"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeMiterlimit="10"
-            stroke="currentColor"
-            fill="none"
-          >
-            <rect x="3" y="1" width="7" height="12" />
-            <rect x="3" y="17" width="7" height="6" />
-            <rect x="14" y="1" width="7" height="6" />
-            <rect x="14" y="11" width="7" height="12" />
-          </svg>
           <span class="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-            Company
+            hasan'
+            <span className="text-3xl font-semibold  text-green-500">S</span>
           </span>
         </a>
         <ul class="flex items-center hidden space-x-8 lg:flex">
@@ -38,50 +42,90 @@ export default function Header() {
               title="Our product"
               class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
             >
-              Product
+              Home
             </a>
           </li>
-          <li>
-            <a
-              href="/"
-              aria-label="Our product"
-              title="Our product"
-              class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-            >
-              Features
-            </a>
-          </li>
-          <li>
-            <a
-              href="/"
-              aria-label="Product pricing"
-              title="Product pricing"
-              class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-            >
-              Pricing
-            </a>
-          </li>
-          <li>
-            <a
-              href="/"
-              aria-label="About us"
-              title="About us"
-              class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-            >
-              About us
-            </a>
-          </li>
+
+          <Link
+            to="experience"
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={500}
+          >
+            <li>
+              <a
+                href="/"
+                aria-label="Our product"
+                title="Our product"
+                class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+              >
+                Experience
+              </a>
+            </li>
+          </Link>
+          <Link
+            to="projects"
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={500}
+          >
+            <li>
+              <a
+                href="/"
+                aria-label="Our product"
+                title="Our product"
+                class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+              >
+                Projects
+              </a>
+            </li>
+          </Link>
+          <Link to="about" spy={true} smooth={true} offset={50} duration={500}>
+            <li>
+              <a
+                href="/"
+                aria-label="Our product"
+                title="Our product"
+                class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+              >
+                About
+              </a>
+            </li>
+          </Link>
+          <Link
+            to="contact"
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={500}
+          >
+            <li>
+              <a
+                href="/"
+                aria-label="Our product"
+                title="Our product"
+                class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+              >
+                Contact
+              </a>
+            </li>
+          </Link>
         </ul>
         <ul class="flex items-center hidden space-x-8 lg:flex">
           <li>
-            <a
-              href="/"
-              class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-              aria-label="Sign up"
-              title="Sign up"
-            >
-              Sign up
-            </a>
+            <div>
+              <a
+                target="_blank"
+                href="https://drive.google.com/file/d/1I5av3KQxHbhK3tp8s3nlYJQ8zatLFZYh/view?usp=sharing"
+                download="mahmudul_resumi.pdf"
+              >
+                <button className=" p-3 font-semibold rounded-sm w-60 text-lg   bg-green-500 text-black-400 uppercase">
+                  Download-Resume
+                </button>
+              </a>
+            </div>
           </li>
         </ul>
         <div class="lg:hidden">
@@ -117,24 +161,19 @@ export default function Header() {
                       title="Company"
                       class="inline-flex items-center"
                     >
-                      <svg
-                        class="w-8 text-deep-purple-accent-400"
-                        viewBox="0 0 24 24"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeMiterlimit="10"
-                        stroke="currentColor"
-                        fill="none"
+                      <a
+                        href="/"
+                        aria-label="Company"
+                        title="Company"
+                        class="inline-flex items-center"
                       >
-                        <rect x="3" y="1" width="7" height="12" />
-                        <rect x="3" y="17" width="7" height="6" />
-                        <rect x="14" y="1" width="7" height="6" />
-                        <rect x="14" y="11" width="7" height="12" />
-                      </svg>
-                      <span class="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                        Company
-                      </span>
+                        <span class="  text-xl font-bold tracking-wide text-gray-800 uppercase">
+                          hasan'
+                          <span className="text-3xl font-semibold  text-green-500">
+                            S
+                          </span>
+                        </span>
+                      </a>
                     </a>
                   </div>
                   <div>

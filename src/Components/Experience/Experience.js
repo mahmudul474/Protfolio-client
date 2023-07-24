@@ -3,7 +3,7 @@ import bg from "./experience.jpg";
 export default function Experience() {
   return (
     <div
-      id="projects"
+      id="experience"
       className="  p-9 "
       style={{
         backgroundImage: `url(${bg})`

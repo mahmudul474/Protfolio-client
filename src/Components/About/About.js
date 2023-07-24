@@ -3,15 +3,14 @@ import thankYou from "../../assates/Thank.gif";
 
 export default function About() {
   return (
-    <section class="flex items-center     font-poppins dark:bg-gray-800 ">
+    <section
+      id="about"
+      class="flex items-center     font-poppins dark:bg-gray-800 "
+    >
       <div class="justify-center flex-1 container  py-4 mx-auto lg:py-6 md:px-6">
         <div class="flex flex-wrap ">
           <div class="w-full px-4 mb-10 lg:w-1/2 lg:mb-0">
-            <img
-              src={thankYou}
-              alt=""
-              class="relative z-40 object-cover w-full "
-            />
+            <img src={thankYou} alt="" class="relative  object-cover w-full " />
           </div>
           <div class="w-full px-4 mb-10 lg:w-1/2 lg:mb-0 ">
             <h2 class="py-3 pl-2 mb-4   font-bold  ">
