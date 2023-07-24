@@ -42,7 +42,7 @@ export default function PersonalSkill() {
           <div className="flex flex-col justify-between p-5 border rounded shadow-sm">
             <div>
               <div className="flex items-center justify-between  mb-4 rounded-full bg-indigo-50">
-                <h3 className="font-semibold text-lg ">Dedication</h3>
+                <h3 className="font-semibold text-lg ">Intelligent</h3>
                 <span className="w-16 h-16 ">
                   <img className="w-full  h-full " src={intalizent} />
                 </span>

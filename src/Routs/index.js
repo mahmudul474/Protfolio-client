@@ -2,6 +2,8 @@ import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layot/Main";
 import Home from "../Pages/Home/Home";
 import App from "../App";
+import AllProjects from "../Pages/AllProjects/AllProjects";
+import Dettails from "../Components/Projects/ProjectDettails/Dettails";
 
 const router = createBrowserRouter([
   {
@@ -13,8 +15,15 @@ const router = createBrowserRouter([
         element: <Home></Home>
       },
       {
-        path: "/a",
-        element: <App></App>
+        path: "/projects",
+        element: <AllProjects></AllProjects>
+      },
+
+      {
+        path: "/projects/:id",
+        loader: async ({ params }) =>
+          fetch(`http://localhost:5000/project/${params.id}`),
+        element: <Dettails></Dettails>
       }
     ]
   }

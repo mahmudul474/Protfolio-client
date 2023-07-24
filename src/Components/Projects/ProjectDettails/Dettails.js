@@ -1,20 +1,15 @@
 import React from 'react';
-import Nav from '../../../Navbar/Nav';
-import Releted from './Releted-Projects/Releted';
+ 
+import Releted from "./Releted-Projects/Releted";
 import { AiFillGithub } from "react-icons/ai";
 import { BsCreditCard2FrontFill } from "react-icons/bs";
-import { useLoaderData } from 'react-router-dom';
-
+import { useLoaderData } from "react-router-dom";
 
 const Dettails = () => {
   const data = useLoaderData();
-
-  console.log(data);
-
+  console.log(data, "data");
   return (
     <>
-      <Nav></Nav>
-
       <section className="text-gray-600 body-font overflow-hidden">
         <div className="container px-5 py-24 mx-auto">
           <div className="lg:w-4/5 mx-auto flex flex-wrap">
@@ -23,22 +18,19 @@ const Dettails = () => {
               style={{
                 transition: "ease-in-out 2s",
                 backgroundSize: "cover",
-                backgroundImage: `url(${data.home})`
+                backgroundImage: `url(${data.mainImg})`
               }}
             >
               {" "}
             </div>
 
             <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-              <h2 className="text-sm title-font text-gray-500 tracking-widest">
-                {data.Category}
-              </h2>
               <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">
-                {data.projectName}
+                {data.title}
               </h1>
 
               <div>
-                <h1>{data.projectDescription}</h1>
+                <h1>{data.shortDesc}</h1>
               </div>
               <div className="flex my-5">
                 <div className="flex  border-r-4  pr-2  border-green-500 items-center">
@@ -47,7 +39,8 @@ const Dettails = () => {
                   </span>
                   <a
                     className="text-xl font-semibold capitalize"
-                    href={`${data.live}`}
+                    target="_blank"
+                    href={data?.link[0]?.live}
                   >
                     live site
                   </a>
@@ -58,7 +51,8 @@ const Dettails = () => {
                   </span>
                   <a
                     className="text-xl font-semibold capitalize"
-                    href={`${data.clientCode}`}
+                    target="_blank"
+                    href={data?.link[1]?.client}
                   >
                     client-code
                   </a>
@@ -70,7 +64,8 @@ const Dettails = () => {
                   </span>
                   <a
                     className="text-xl font-semibold capitalize"
-                    href={data.serverCode}
+                    target="_black "
+                    href={data?.link[2]?.server}
                   >
                     server-code
                   </a>
@@ -82,7 +77,7 @@ const Dettails = () => {
                 </h1>
 
                 <ul>
-                  {data?.features?.map((feature) => (
+                  {data?.features?.map(feature => (
                     <li className="my-2 capitalize font-semibold list-disc">
                       {feature}
                     </li>
@@ -95,7 +90,7 @@ const Dettails = () => {
                   Technology
                 </h1>
                 <ul>
-                  {data?.Technology?.map((tec) => (
+                  {data?.Technology?.map(tec => (
                     <li className="my-2 capitalize font-semibold">{tec}</li>
                   ))}
                 </ul>
@@ -113,7 +108,7 @@ const Dettails = () => {
 
       <div className="my-6 px-12">
         <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-10 ">
-          {data?.image?.map((img) => (
+          {data?.image?.map(img => (
             <img
               className=" border-green-500  border h-44  object-cover"
               src={img}

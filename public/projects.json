@@ -3,7 +3,7 @@
     "title": "Remote-Talks",
     "mainImg": "https://i.ibb.co/ypDWLyK/screencapture-remote-talk-netlify-app-2023-07-22-00-20-48.png",
     "smartImg": "https://i.ibb.co/VW191vw/Screenshot-15.png",
-    "short-desc": "RemoteTalks is a web-based communication platform inspired by Zoom, developed using the MERN stack (MongoDB, Express.js, React, Node.js). The platform aims to provide a comprehensive remote communication experience, allowing users to create and join meetings, share their screens, send chat messages, manage friend requests, and edit their profiles.",
+    "shortDesc": "RemoteTalks is a web-based communication platform inspired by Zoom, developed using the MERN stack (MongoDB, Express.js, React, Node.js). The platform aims to provide a comprehensive remote communication experience, allowing users to create and join meetings, share their screens, send chat messages, manage friend requests, and edit their profiles.",
     "features": [
       "Meeting Features: Remote Talk Allows Users To Create Meetings With Features Such As Virtual Hand-Raising, Screen Sharing, And Live Streaming ",
       " Chat System: Remote Talk Has A Built-In Messenger System For Communication Outside Of Meetings",
