@@ -51,3 +51,50 @@
 //     "technology": ["", "", "", "", ""],
 //     "link": [{ "live": "" }, { "client": "" }, { "server": "" }]
 //   }
+
+
+
+
+
+
+
+
+
+
+  {
+     "title": "KB-Corporetions",
+    "category":"top",
+      "mainImg": "https://i.ibb.co/DG2VZGq/screencapture-kb-corporetion-netlify-app-2023-07-25-15-46-45.png",
+    "smartImg": "https://i.ibb.co/GdLq4PN/Screenshot-1.png",
+     "short-desc": "KB-Corporation is an online live auction platform designed to bring users an exciting bidding system for various products. The website aims to create a dynamic marketplace where users can participate in auctions, place bids, and make direct purchases. The platform will have user-friendly dashboards for users, sellers, and administrators to ensure smooth management and interactions.",
+     "features": ["Live Auctions and Bidding System:
+KB-Corporation will host live auctions for various products, where registered users can place bids. The auction system will allow real-time bidding, and the highest bidder at the end of the auction will be declared the winner. Participants will receive email notifications about auction updates and results.", "Multiple Product Bidding and Purchase:
+Users will have the flexibility to bid on and purchase multiple products available on the platform. Whether it's electronics, collectibles, or other items, users can place bids or buy products directly.", "Messenger Support:
+To facilitate smooth communication between buyers and sellers, the platform will feature a built-in messenger system. Users can interact with sellers, ask questions about products, and negotiate terms through the messaging interface.", "Seller Product Upload:
+Sellers can list their products on the platform by uploading an Excel file. This bulk upload feature streamlines the process for sellers with multiple items to sell.", "User Dashboard:
+Registered users will have access to their personalized dashboards. They can manage their bids, view won items, track purchases, and communicate with sellers through the messaging system.", "Seller Dashboard:
+Sellers will have a dedicated dashboard to manage their listed products, review bids, and handle buyer requests. They can also monitor auction performance and update product information as needed.", "Admin Dashboard:
+The administrator will have complete control over the platform. The admin dashboard will allow them to manage user accounts, moderate auctions, handle reported issues, process payments, and maintain overall site functionality."],
+     "subimg": ["https://i.ibb.co/GdLq4PN/Screenshot-1.png", "https://i.ibb.co/QkQt2Nq/Screenshot-2.png", "https://i.ibb.co/GQnfGf8/Screenshot-3.png", "https://i.ibb.co/KLGmbsh/Screenshot-4.png", "https://i.ibb.co/m9TMFxQ/Screenshot-5.png", "https://i.ibb.co/CbZHkc3/Screenshot-6.png",
+
+
+
+"https://i.ibb.co/gFDHtNq/Screenshot-7.png",
+"https://i.ibb.co/s22vvKh/Screenshot-8.png",
+"https://i.ibb.co/9b5xB9p/Screenshot-9.png",
+"https://i.ibb.co/98wFgMf/Screenshot-10.png",
+"https://i.ibb.co/4FbrC3v/Screenshot-11.png",
+"https://i.ibb.co/zXtj8c7/Screenshot-12.png",
+"https://i.ibb.co/zhXc464/Screenshot-13.png",
+"https://i.ibb.co/cNwvn0F/Screenshot-14.png",
+"https://i.ibb.co/VqXRk9W/Screenshot-15.png"],
+      "technology": [
+      "frontend: Html, Css, Tailwind,JavaScript, React, ",
+      "Backend:  Node, Express, AmazonS3, webSocket, Nodimiller",
+      "Authentication: JWT,Firebase",
+      "Database:  MongoDB, Vercel, ",
+      "Other tools and libraries: Netlify, ReactHookFrom, TanStack-React-Query"
+    ],
+    "link": [{ "live": "https://kb-corporetion.netlify.app" }, { "client": "https://github.com/mahmudul474/KB_Corporetion.git" }, { "server": "https://github.com/mahmudul474/kb_server.git" }]
+
+  }

@@ -3,14 +3,30 @@ import { Link } from "react-router-dom";
 
 export default function AllProjects() {
   const [projects, setProjects] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
-    fetch(`http://localhost:5000/projects`)
+    setIsLoading(true);
+    fetch(`https://dev-server-devsobuj910.vercel.app/projects`)
       .then(res => res.json())
       .then(data => {
         setProjects(data);
+        setIsLoading(false);
       });
   }, []);
- 
+
+  if (isLoading) {
+    return (
+      <div class="h-screen bg-white">
+        <div class="flex justify-center items-center h-full">
+          <img
+            class="h-16 w-16"
+            src="https://icons8.com/preloaders/preloaders/1488/Iphone-spinner-2.gif"
+            alt=""
+          />
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div class="container mx-auto px-5 py-2 lg:px-32 lg:pt-12">
@@ -20,9 +36,9 @@ export default function AllProjects() {
           Look at my portfolio and give me your feedback
         </h1>
       </div>
-      <div class="-m-1 flex flex-wrap md:-m-2">
+      <div class="grid lg:grid-cols-3 grid-cols-1 gap-8">
         {projects?.map(project => (
-          <div className="w-1/3  cursor-pointer p-1 md:p-2 h-[300px] relative">
+          <div className="w-full border border-gray-400  cursor-pointer p-1 md:p-2 h-[300px] relative">
             <img
               alt="gallery"
               className="block h-full w-full  rounded-lg object-cover object-center cursor-pointer"

@@ -194,55 +194,101 @@ export default function Header() {
                 </div>
                 <nav>
                   <ul class="space-y-4">
-                    <li>
+                    <li onClick={() => setIsMenuOpen(false)}>
                       <a
                         href="/"
                         aria-label="Our product"
                         title="Our product"
                         class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >
-                        Product
+                        Home
                       </a>
                     </li>
+
+                    <Link
+                      to="experience"
+                      spy={true}
+                      smooth={true}
+                      offset={50}
+                      duration={500}
+                    >
+                      <li onClick={() => setIsMenuOpen(false)}>
+                        <a
+                          href="/"
+                          aria-label="Our product"
+                          title="Our product"
+                          class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                        >
+                          Experience
+                        </a>
+                      </li>
+                    </Link>
+                    <Link
+                      to="projects"
+                      spy={true}
+                      smooth={true}
+                      offset={50}
+                      duration={500}
+                    >
+                      <li onClick={() => setIsMenuOpen(false)}>
+                        <a
+                          href="/"
+                          aria-label="Our product"
+                          title="Our product"
+                          class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                        >
+                          Projects
+                        </a>
+                      </li>
+                    </Link>
+                    <Link
+                      to="about"
+                      spy={true}
+                      smooth={true}
+                      offset={50}
+                      duration={500}
+                    >
+                      <li onClick={() => setIsMenuOpen(false)}>
+                        <a
+                          href="/"
+                          aria-label="Our product"
+                          title="Our product"
+                          class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                        >
+                          About
+                        </a>
+                      </li>
+                    </Link>
+                    <Link
+                      to="contact"
+                      spy={true}
+                      smooth={true}
+                      offset={50}
+                      duration={500}
+                    >
+                      <li onClick={() => setIsMenuOpen(false)}>
+                        <a
+                          href="/"
+                          aria-label="Our product"
+                          title="Our product"
+                          class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                        >
+                          Contact
+                        </a>
+                      </li>
+                    </Link>
                     <li>
-                      <a
-                        href="/"
-                        aria-label="Our product"
-                        title="Our product"
-                        class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                      >
-                        Features
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/"
-                        aria-label="Product pricing"
-                        title="Product pricing"
-                        class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                      >
-                        Pricing
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/"
-                        aria-label="About us"
-                        title="About us"
-                        class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                      >
-                        About us
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/"
-                        class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                        aria-label="Sign up"
-                        title="Sign up"
-                      >
-                        Sign up
-                      </a>
+                      <div>
+                        <a
+                          target="_blank"
+                          href="https://drive.google.com/file/d/1I5av3KQxHbhK3tp8s3nlYJQ8zatLFZYh/view?usp=sharing"
+                          download="mahmudul_resumi.pdf"
+                        >
+                          <button className=" p-3 font-semibold rounded-sm w-60 text-lg   bg-green-500 text-black-400 uppercase">
+                            Download-Resume
+                          </button>
+                        </a>
+                      </div>
                     </li>
                   </ul>
                 </nav>

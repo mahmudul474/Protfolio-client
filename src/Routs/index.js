@@ -22,7 +22,9 @@ const router = createBrowserRouter([
       {
         path: "/projects/:id",
         loader: async ({ params }) =>
-          fetch(`http://localhost:5000/project/${params.id}`),
+          fetch(
+            `https://dev-server-devsobuj910.vercel.app/project/${params.id}`
+          ),
         element: <Dettails></Dettails>
       }
     ]

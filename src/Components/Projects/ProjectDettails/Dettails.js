@@ -118,11 +118,11 @@ const Dettails = () => {
       </div>
 
       <div class="container mx-auto px-5 py-2 lg:px-32 lg:pt-12">
-        <div className="flex flex-wrap">
+        <div className="grid  gap-5   grid-cols-1 lg:grid-cols-3">
           {data?.subimg?.map((img, index) => (
             <div
               key={index}
-              className="w-1/3 p-1 md:p-2"
+              className="w-full border   rounded-md  border-gray-400 p-1 md:p-2"
               onClick={() => handleImageClick(img)}
             >
               <img
